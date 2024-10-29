@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-    <link rel="stylesheet" href="styles/styles.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="display"></div>
+      <div class="buttons">
+        <div class="row">
+          <button class="btn extra-btns" value="AC">AC</button>
+          <button class="btn extra-btns" value="backspace"><-</button>
+          <button class="btn operator" value="%">%</button>
+          <button class="btn operator" value="/">/</button>
+        </div>
+        <div class="row">
+          <button class="btn operands" value="7">7</button>
+          <button class="btn operands" value="8">8</button>
+          <button class="btn operands" value="9">9</button>
+          <button class="btn operator" value="*">*</button>
+        </div>
+        <div class="row">
+          <button class="btn operands" value="4">4</button>
+          <button class="btn operands" value="5">5</button>
+          <button class="btn operands" value="6">6</button>
+          <button class="btn operator" value="-">-</button>
+        </div>
+        <div class="row">
+            <button class="btn operands" value="2">2</button>
+            <button class="btn operands" value="3">3</button>
+            <button class="btn operands" value="1">1</button>
+          <button class="btn operator" value="+">+</button>
+        </div>
+        <div class="row">
+          <button class="btn operator" value="sign">+/-</button>
+          <button class="btn operands" value="0">0</button>
+          <button class="btn operator" value=".">.</button>
+          <button class="btn operator" value="=">=</button>
+        </div>
+      </div>
+    </div>
 
     <script src="scripts/index.js"></script>
-</body>
+  </body>
 </html>
