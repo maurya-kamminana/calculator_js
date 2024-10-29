@@ -1,20 +1,25 @@
 function add(a, b){
-    return a+b;
+    // round off to 3 decimal places
+    return Math.round((a+b) * 1000) / 1000;
+    // return a+b;
 }
 
 function subtract(a, b){
-    return a-b;
+    return Math.round((a-b) * 1000) / 1000;
+    // return a-b;
 }
 
 function multiply(a, b){
-    return a*b;
+    return Math.round((a*b) * 1000) / 1000;
+    // return a*b;
 }
 
 function divide(a, b){
     if(b == 0){
         return "Cannot divide by zero";
     }
-    return a/b;
+    return Math.round((a/b) * 1000) / 1000;
+    // return a/b;
 }
 
 function operate(operator, a, b){
@@ -143,3 +148,46 @@ function onClick(e){
 }
 
 buttons.addEventListener('click', onClick);
+
+
+const body = document.querySelector('body');
+const onKeyPress = (e) => {
+    console.log(e.key);
+    switch(e.key){
+        case 'Enter':
+            onClick({target: {value: '='}});
+            break;
+        case '+':
+        case '-':
+        case '*':
+        case '/':
+            onClick({target: {value: e.key}});
+            break;
+        case '.':
+            onClick({target: {value: '.'}});
+            break;
+        case '%':
+            onClick({target: {value: '%'}});
+            break;
+        case 'Backspace':
+            onClick({target: {value: 'backspace'}});
+            break;
+        case 'Delete':
+            onClick({target: {value: 'AC'}});
+            break;
+        case '0':
+        case '1':
+        case '2':
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '7':
+        case '8':
+        case '9':
+            onClick({target: {value: e.key}});
+            break;
+    }
+}
+
+body.addEventListener('keydown', onKeyPress);
